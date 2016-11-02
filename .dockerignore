@@ -6,6 +6,7 @@ spec
 media
 .openshift
 .bundle
+!.bundle/config
 vendor/bundle
 db/*.sqlite3
 public/system/*
