@@ -3,6 +3,12 @@ source 'https://rubygems.org'
 # Ruby 2.2.2 is the minimum requirement
 ruby ['2.2.2', RUBY_VERSION].max
 
+# Ensure github repositories are fetched using HTTPS
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end if Gem::Version.new(Bundler::VERSION) < Gem::Version.new('2')
+
 # Load vendored dotenv gem and .env file
 require File.join(File.dirname(__FILE__), 'lib/gemfile_helper.rb')
 GemfileHelper.load_dotenv do |dotenv_dir|
@@ -50,7 +56,7 @@ gem 'twitter-stream', github: 'cantino/twitter-stream', branch: 'huginn'
 gem 'omniauth-twitter', '~> 1.2.1'
 
 # Tumblr Agents
-gem 'tumblr_client', github: 'tumblr/tumblr_client', branch: 'master'  # '>= 0.8.5'
+gem 'tumblr_client', github: 'tumblr/tumblr_client', branch: 'master', ref: '0c59b04e49f2a8c89860613b18cf4e8f978d8dc7'  # '>= 0.8.5'
 gem 'omniauth-tumblr', '~> 1.2'
 
 # Dropbox Agents
@@ -91,7 +97,7 @@ gem 'delayed_job_active_record', github: 'dsander/delayed_job_active_record', br
 gem 'devise','~> 4.2.0'
 gem 'em-http-request', '~> 1.1.2'
 gem 'faraday', '~> 0.9.0'
-gem 'faraday_middleware', github: 'lostisland/faraday_middleware', branch: 'master'  # '>= 0.10.1'
+gem 'faraday_middleware', github: 'lostisland/faraday_middleware', branch: 'master', ref: 'c5836ae55857272732b33eb0e0a98d60e995a376'  # '>= 0.10.1'
 gem 'feedjira', '~> 2.0'
 gem 'font-awesome-sass', '~> 4.3.2'
 gem 'foreman', '~> 0.63.0'
@@ -103,7 +109,7 @@ gem 'jquery-rails', '~> 4.2.1'
 gem 'huginn_agent', '~> 0.4.0'
 gem 'json', '~> 1.8.1'
 gem 'jsonpathv2', '~> 0.0.8'
-gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable'
+gem 'kaminari', github: "amatsuda/kaminari", branch: '0-17-stable', ref: 'abbf93d557208ee1d0b612c612cd079f86ed54f4'
 gem 'kramdown', '~> 1.3.3'
 gem 'liquid', '~> 3.0.3'
 gem 'loofah', '~> 2.0'
