@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/amatsuda/kaminari.git
-  revision: e83d6cebf69fd78e3c9830992209601fdc3e0f23
+  revision: abbf93d557208ee1d0b612c612cd079f86ed54f4
+  ref: abbf93d557208ee1d0b612c612cd079f86ed54f4
   branch: 0-17-stable
   specs:
     kaminari (0.17.0)
@@ -39,7 +40,8 @@ GIT
 
 GIT
   remote: https://github.com/lostisland/faraday_middleware.git
-  revision: 39c4d785513564805c207f2000fbb062f223bb9f
+  revision: c5836ae55857272732b33eb0e0a98d60e995a376
+  ref: c5836ae55857272732b33eb0e0a98d60e995a376
   branch: master
   specs:
     faraday_middleware (0.10.0)
@@ -47,7 +49,8 @@ GIT
 
 GIT
   remote: https://github.com/tumblr/tumblr_client.git
-  revision: d7647bae2bafd557a8671ae8e60d1a30aed81bcd
+  revision: 0c59b04e49f2a8c89860613b18cf4e8f978d8dc7
+  ref: 0c59b04e49f2a8c89860613b18cf4e8f978d8dc7
   branch: master
   specs:
     tumblr_client (0.8.5)
