@@ -9,7 +9,6 @@ WORKDIR /app
 ADD ["Gemfile", "Gemfile.lock", "/app/"]
 ADD lib/gemfile_helper.rb /app/lib/
 ADD vendor/gems /app/vendor/gems
-ADD .bundle/config /app/.bundle/
 
 RUN chown -R huginn:huginn /app && \
     sudo -u huginn -H echo "gem 'sqlite3', '~> 1.3.11'" >> /app/Gemfile && \
