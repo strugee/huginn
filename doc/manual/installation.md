@@ -46,7 +46,7 @@ up-to-date and install it.
 
 Import node.js repository (can be skipped on Ubuntu and Debian Jessie):
 
-    curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+    curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 
 Install the required packages (needed to compile Ruby and native extensions to Ruby gems):
 
